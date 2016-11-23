@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.edenorte.validacion</groupId>
+  <artifactId>lib-validacion-tarjetas-credito</artifactId>
+  <name>Librería CORE de Validación de Tarjetas de Crédito</name>
+  <version>1.0-SNAPSHOT</version>
+  <description>Librería CORE que se usa como punto de partida para programar una lógica
+        de validación de números y cvv de tarjetas de crédito. Usa el famoso 
+        algoritmo Lunh para hacer la validación del número de tarjeta y del dígito
+        verificador de la misma. Tiene como dependencias Apache Commons Validator y
+        CLI para el manejo de parámetros de línea de comandos.</description>
+  <url>http://enslablinux:8080/scm/git/lib-validacion-tarjetas-credito</url>
+  <developers>
+    <developer>
+      <name>Pavel Núñez Deschamps</name>
+      <email>panunez@edenorte.com.do</email>
+      <organization>EDENORTE</organization>
+    </developer>
+  </developers>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>${project.mainClass}</mainClass>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.4.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <minimizeJar>true</minimizeJar>
+              <filters>
+                <filter>
+                  <artifact>log4j-api</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>log4j-core</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>commons-logging:commons-logging</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>
+    <repository>
+      <id>archiva.default</id>
+      <name>Internal Release Repository</name>
+      <url>http://enslablinux:8040/repository/internal/</url>
+    </repository>
+    <snapshotRepository>
+      <id>archiva.snapshots</id>
+      <name>Internal Snapshot Repository</name>
+      <url>http://enslablinux:8040/repository/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.mainClass>com.edenorte.validacion.tarjetas.credito.App</project.mainClass>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+</project>
+

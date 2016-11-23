@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.edenorte.validacion</groupId>
+    <artifactId>lib-validacion-tarjetas-credito</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <!-- Para implementar el manejo de distribución del proyecto -->
+    <distributionManagement>
+        <repository>
+            <id>archiva.default</id>
+            <name>Internal Release Repository</name>
+            <url>http://enslablinux:8040/repository/internal/</url>
+        </repository>
+        <snapshotRepository>
+            <id>archiva.snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://enslablinux:8040/repository/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.mainClass>com.edenorte.validacion.tarjetas.credito.App</project.mainClass>
+        
+    </properties>
+    <!-- Datos necesarios para publicar como artefacto en Maven Archiva -->
+        
+    <description>
+        Librería CORE que se usa como punto de partida para programar una lógica
+        de validación de números y cvv de tarjetas de crédito. Usa el famoso 
+        algoritmo Lunh para hacer la validación del número de tarjeta y del dígito
+        verificador de la misma. Tiene como dependencias Apache Commons Validator y
+        CLI para el manejo de parámetros de línea de comandos.
+    </description>
+    <url>	
+        http://enslablinux:8080/scm/git/lib-validacion-tarjetas-credito
+    </url>
+    
+    <developers>
+        <developer>
+            <name>Pavel Núñez Deschamps</name>
+            <email>panunez@edenorte.com.do</email>
+            <organization>
+                EDENORTE
+            </organization>
+        </developer>
+    </developers>
+    
+
+    
+    <dependencies>
+        <!-- Para implementar la funcionalidad de línea de comandos de Apache Commons -->
+        <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <!-- Para implementar la validacion de Tarjetas de Crédito de Apache Commons -->
+        <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+        <!-- Para implementar Log for Java -->
+        <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-api</artifactId>
+          <version>2.7</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+          <version>2.7</version>
+        </dependency>
+        
+    </dependencies>
+    
+    <build>
+	<plugins>
+                <!-- Para hacer el JAR ejecutable incluyendo la clase main -->
+		<plugin>
+			<!-- Build an executable JAR -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>${project.mainClass}</mainClass>
+                                                <addClasspath>true</addClasspath>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+                <!-- Para hacer un Uber JAR -->
+<!--                <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-shade-plugin</artifactId>
+                  <version>2.4.3</version>
+                  <executions>
+                    <execution>
+                      <phase>package</phase>
+                      <goals>
+                        <goal>shade</goal>
+                      </goals>
+                      <configuration>
+                        <minimizeJar>true</minimizeJar>
+                         Intenta incluir log4j 
+                        <filters>
+                            <filter>
+                               <artifact>log4j-api</artifact>
+                               <includes>
+                                   <include>**</include>
+                               </includes>
+                            </filter>
+                            <filter>
+                               <artifact>log4j-core</artifact>
+                               <includes>
+                                   <include>**</include>
+                               </includes>
+                            </filter>
+                            <filter>
+                               <artifact>commons-logging:commons-logging</artifact>
+                               <includes>
+                                   <include>**</include>
+                               </includes>
+                            </filter>
+                      </filters>            
+                      </configuration>
+                    </execution>
+                  </executions>
+                </plugin>-->
+                
+	</plugins>
+</build>
+    <name>Librería CORE de Validación de Tarjetas de Crédito</name>
+</project>
