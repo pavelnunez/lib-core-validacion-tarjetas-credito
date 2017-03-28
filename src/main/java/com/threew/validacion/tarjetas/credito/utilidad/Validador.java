@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.edenorte.validacion.tarjetas.credito.utilidad;
+package com.threew.validacion.tarjetas.credito.utilidad;
 
-import com.edenorte.validacion.tarjetas.credito.logs.LoggerInterno;
-import com.edenorte.validacion.tarjetas.credito.tipos.Tarjeta;
-import com.edenorte.validacion.tarjetas.credito.tipos.TipoTarjeta;
+import com.threew.validacion.tarjetas.credito.logs.LoggerInterno;
+import com.threew.validacion.tarjetas.credito.tipos.Tarjeta;
+import com.threew.validacion.tarjetas.credito.tipos.TipoTarjeta;
 import org.apache.commons.validator.routines.CreditCardValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * Clase de validación de tarjetas de crédito
- * @author Pavel Núñez Deschamps <panunez@edenorte.com.do>
+ * @author Pavel Núñez Deschamps <pndeschamps@gmail.com>
  */
 public class Validador {
     private final String numeroTarjetaString;

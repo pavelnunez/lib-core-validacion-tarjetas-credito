@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Pavel Núñez Deschamps <pndeschamps@gmail.com>,<panunez@edenorte.com.do>
+ * Copyright (C) 2016 Pavel Núñez Deschamps <pndeschamps@gmail.com>,<pndeschamps@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.edenorte.validacion.tarjetas.credito.utilidad;
+package com.threew.validacion.tarjetas.credito.utilidad;
 
-import com.edenorte.validacion.tarjetas.credito.logs.LoggerInterno;
-import com.edenorte.validacion.tarjetas.credito.tipos.TipoTarjeta;
+import com.threew.validacion.tarjetas.credito.logs.LoggerInterno;
+import com.threew.validacion.tarjetas.credito.tipos.TipoTarjeta;
 
 /**
  * Esta clase estática se usa para detectar tipo de Tarjeta de Crédito.
  * @author Pavel Núñez Deschamps
- * <pndeschamps@gmail.com>,<panunez@edenorte.com.do>
+ * <pndeschamps@gmail.com>,<pndeschamps@gmail.com>
  */
 public class DetectarTipo {
         private static LoggerInterno Log = new LoggerInterno(DetectarTipo.class);

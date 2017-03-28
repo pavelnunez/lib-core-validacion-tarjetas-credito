@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Pavel Núñez Deschamps <pndeschamps@gmail.com>,<panunez@edenorte.com.do>
+ * Copyright (C) 2016 Pavel Núñez Deschamps <pndeschamps@gmail.com>,<pndeschamps@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.edenorte.validacion.tarjetas.credito.tipos;
+package com.threew.validacion.tarjetas.credito.tipos;
 
 /**
  *
  * @author Pavel Núñez Deschamps
- * <pndeschamps@gmail.com>,<panunez@edenorte.com.do>
+ * <pndeschamps@gmail.com>,<pndeschamps@gmail.com>
  */
 public class Tarjeta {
     private Long numeroTarjeta;

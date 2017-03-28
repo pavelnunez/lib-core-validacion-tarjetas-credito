@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.edenorte.validacion</groupId>
+    <groupId>com.threew.validacion</groupId>
     <artifactId>lib-validacion-tarjetas-credito</artifactId>
     <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -25,7 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <project.mainClass>com.edenorte.validacion.tarjetas.credito.App</project.mainClass>
+        <project.mainClass>com.threew.validacion.tarjetas.credito.App</project.mainClass>
         
     </properties>
     <!-- Datos necesarios para publicar como artefacto en Maven Archiva -->
@@ -38,15 +38,15 @@
         CLI para el manejo de parámetros de línea de comandos.
     </description>
     <url>	
-        http://enslablinux:8080/scm/git/lib-validacion-tarjetas-credito
+        http://scmserver.local:8080/scm/git/lib-validacion-tarjetas-credito
     </url>
     
     <developers>
         <developer>
             <name>Pavel Núñez Deschamps</name>
-            <email>panunez@edenorte.com.do</email>
+            <email>pndeschamps@gmail.com</email>
             <organization>
-                EDENORTE
+                3W WEB CONSULTING GROUP
             </organization>
         </developer>
     </developers>

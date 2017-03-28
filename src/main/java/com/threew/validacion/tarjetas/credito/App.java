@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.edenorte.validacion.tarjetas.credito;
+package com.threew.validacion.tarjetas.credito;
 
-import com.edenorte.validacion.tarjetas.credito.logs.LoggerInterno;
-import com.edenorte.validacion.tarjetas.credito.tipos.TipoTarjeta;
-import com.edenorte.validacion.tarjetas.credito.utilidad.DetectarTipo;
-import com.edenorte.validacion.tarjetas.credito.utilidad.Validador;
+import com.threew.validacion.tarjetas.credito.logs.LoggerInterno;
+import com.threew.validacion.tarjetas.credito.tipos.TipoTarjeta;
+import com.threew.validacion.tarjetas.credito.utilidad.DetectarTipo;
+import com.threew.validacion.tarjetas.credito.utilidad.Validador;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.edenorte.validacion</groupId>
+  <groupId>com.threew.validacion</groupId>
   <artifactId>lib-validacion-tarjetas-credito</artifactId>
   <name>Librería CORE de Validación de Tarjetas de Crédito</name>
   <version>1.0-SNAPSHOT</version>
@@ -14,8 +14,8 @@
   <developers>
     <developer>
       <name>Pavel Núñez Deschamps</name>
-      <email>panunez@edenorte.com.do</email>
-      <organization>EDENORTE</organization>
+      <email>pndeschamps@gmail.com</email>
+      <organization>THREEW</organization>
     </developer>
   </developers>
   <build>
@@ -84,7 +84,7 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.mainClass>com.edenorte.validacion.tarjetas.credito.App</project.mainClass>
+    <project.mainClass>com.threew.validacion.tarjetas.credito.App</project.mainClass>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>

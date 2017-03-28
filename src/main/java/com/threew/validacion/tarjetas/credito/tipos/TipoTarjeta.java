@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.edenorte.validacion.tarjetas.credito.tipos;
+package com.threew.validacion.tarjetas.credito.tipos;
 
 /**
  * Enum con los tipos de tarjeta posibles
- * @author Pavel Núñez Deschamps <panunez@edenorte.com.do>
+ * @author Pavel Núñez Deschamps <pndeschamps@gmail.com>
  */
 public enum TipoTarjeta {
     VISA,MASTERCARD,AMEX,DINNERS,DISCOVER,JCB,INDETERMINADO,INVALIDO
